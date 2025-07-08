@@ -1,5 +1,5 @@
 require 'spec_helper'
-require '../../lib/calculator.rb'
+require_relative '../../lib/calculator'
 
 RSpec.describe Calculator do
   it "adds two numbers" do
