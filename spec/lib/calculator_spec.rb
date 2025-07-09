@@ -2,8 +2,9 @@ require 'spec_helper'
 require_relative '../../lib/calculator'
 
 RSpec.describe Calculator do
-  it "adds two numbers" do
-    calculator = Calculator.new
-    expect(calculator.add(2, 3)).to eq(5)
+  let(:calc) { Calculator.new }
+
+  it 'returns 0 for empty string' do
+    expect(calc.add("")).to eq(0)
   end
 end
