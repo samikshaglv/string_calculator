@@ -7,6 +7,12 @@ class Calculator
       delimiter = Regexp.escape(delimiter_str)
     end
     numbers = input.split(/#{delimiter}/).map(&:to_i)
+
+    negatives = numbers.select { |n| n < 0 }
+    unless negatives.empty?
+      raise "negative numbers not allowed: #{negatives.join(', ')}"
+    end
+    
     numbers.sum
   end
 end
