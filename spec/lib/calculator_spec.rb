@@ -11,4 +11,8 @@ RSpec.describe Calculator do
   it 'should returns the number if only one number is given' do
     expect(calc.add("10")).to eq(10)
   end
+
+  it 'should returns sum of two numbers separated by comma' do
+    expect(calc.add("10,6")).to eq(16)
+  end
 end
