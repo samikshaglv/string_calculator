@@ -1,5 +1,6 @@
 class Calculator
   def add(input)
-    0
+    return 0 if input.strip.empty?
+    input.to_i
   end
 end
