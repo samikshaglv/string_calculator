@@ -21,7 +21,7 @@ RSpec.describe Calculator do
   end
 
   it 'should handles newlines between numbers' do
-    expect(calc.add("1\n5,2")).to eq(7)
+    expect(calc.add("1\n5,2")).to eq(8)
   end
 
   it 'should custom delimiter declared at the beginning' do
