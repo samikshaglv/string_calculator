@@ -7,4 +7,8 @@ RSpec.describe Calculator do
   it 'returns 0 for empty string' do
     expect(calc.add("")).to eq(0)
   end
+
+  it 'should returns the number if only one number is given' do
+    expect(calc.add("10")).to eq(10)
+  end
 end
