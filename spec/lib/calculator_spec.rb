@@ -27,4 +27,8 @@ RSpec.describe Calculator do
   it 'should custom delimiter declared at the beginning' do
     expect(calc.add("//;\n4;2")).to eq(6)
   end
+
+  it 'raises error when negative numbers are present' do
+    expect { calc.add("1,-2,3,-5") }.to raise_error("negative numbers not allowed: -2, -5")
+  end
 end
