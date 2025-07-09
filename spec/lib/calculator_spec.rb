@@ -23,4 +23,8 @@ RSpec.describe Calculator do
   it 'should handles newlines between numbers' do
     expect(calc.add("1\n5,2")).to eq(7)
   end
+
+  it 'should custom delimiter declared at the beginning' do
+    expect(calc.add("//;\n4;2")).to eq(6)
+  end
 end
